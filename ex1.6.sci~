@@ -1,0 +1,11 @@
+F0 = 3; Fs = 8; T = 1/Fs; Tp = 1/F0;
+t  = 0:0.001:2;
+xa = cos(2*%pi*F0*t);
+n  = 0:16;
+x  = cos(2*%pi*F0*n*T);
+clf();
+plot2d(t, xa);
+plot2d3(n*T, x);
+title("x_a(t) va x(n): N = 8 mau = k.Tp = 3 chu ky = 1 s");
+xlabel("t (s)"); ylabel("Amplitude");
+disp(T/Tp);
